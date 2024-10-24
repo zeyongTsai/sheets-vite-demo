@@ -8,6 +8,7 @@ import { UniverFormulaEnginePlugin } from "@univerjs/engine-formula";
 import { UniverRenderEnginePlugin } from "@univerjs/engine-render";
 import { UniverSheetsPlugin } from "@univerjs/sheets";
 import { UniverSheetsFormulaPlugin } from "@univerjs/sheets-formula";
+import { UniverSheetsFormulaUIPlugin } from "@univerjs/sheets-formula-ui";
 import { UniverSheetsUIPlugin } from "@univerjs/sheets-ui";
 import { UniverUIPlugin } from "@univerjs/ui";
 import { UniverSheetsNumfmtPlugin } from "@univerjs/sheets-numfmt";
@@ -46,7 +47,7 @@ univer.registerPlugin(UniverSheetsPlugin);
 univer.registerPlugin(UniverSheetsUIPlugin);
 univer.registerPlugin(UniverSheetsNumfmtPlugin);
 univer.registerPlugin(UniverSheetsFormulaPlugin);
-
+univer.registerPlugin(UniverSheetsFormulaUIPlugin);
 // create univer sheet instance
 univer.createUnit(UniverInstanceType.UNIVER_SHEET, {
   "id": "gyI0JO",
