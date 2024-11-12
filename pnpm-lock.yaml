@@ -58,8 +58,8 @@ importers:
         version: 0.4.1(@grpc/grpc-js@1.11.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rxjs@7.8.1)(typescript@5.6.2)
     devDependencies:
       '@univerjs/vite-plugin':
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.5.1
+        version: 0.5.1
       typescript:
         specifier: ^5.6.2
         version: 5.6.2
@@ -609,9 +609,8 @@ packages:
       react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0
       rxjs: '>=7.0.0'
 
-  '@univerjs/vite-plugin@0.5.0':
-    resolution: {integrity: sha512-VTVcvStR4ugrJwnWUPCwm9Wxrg97e5Fk2hBHyHNkuTUd5Ezupx/4zk9jjzM/lC+Fw7J9FDGJ0Uw3vg+oN3bgsQ==}
-    engines: {node: '>=16.0.0', npm: '>=8.0.0'}
+  '@univerjs/vite-plugin@0.5.1':
+    resolution: {integrity: sha512-WzDeW//YLLOACoAX3p98QJa3GoZQigMUpNxRCn0ONszm9Sep8ilYIItopjVa13i21DjoQC3RhY/3in5YSzL1mQ==}
 
   '@vue/compiler-core@3.5.8':
     resolution: {integrity: sha512-Uzlxp91EPjfbpeO5KtC0KnXPkuTfGsNDeaKQJxQN718uz+RqDYarEf7UhQJGK+ZYloD2taUbHTI2J4WrUaZQNA==}
@@ -1920,7 +1919,7 @@ snapshots:
       - moment
       - typescript
 
-  '@univerjs/vite-plugin@0.5.0': {}
+  '@univerjs/vite-plugin@0.5.1': {}
 
   '@vue/compiler-core@3.5.8':
     dependencies:
