@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/rxjs/dist/bundles/rxjs.umd.min.js"></script>
+  
+    <script src="https://unpkg.com/@univerjs/presets/lib/umd/index.js"></script>
+    
+    <script src="https://unpkg.com/@univerjs/preset-sheets-core/lib/umd/index.js"></script>
+    <script src="https://unpkg.com/@univerjs/preset-sheets-core/lib/umd/locales/zh-CN.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@univerjs/preset-sheets-core/lib/index.css" />
+    <style>
+      html,body {
+        height: 100%;
+      }
+      #app {
+        width: 100%;
+        height: 80vh;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+   
+    <script>
+      const { createUniver, LocaleType, Tools, defaultTheme } = UniverPresets
+      const { UniverSheetsCorePreset } = UniverPresetSheetsCore
+  
+      const { univerAPI } = createUniver({
+        locale: LocaleType.ZH_CN,
+        locales: {
+          zhCN: Tools.deepMerge(
+            {},
+            UniverPresetSheetsCoreZhCN,
+          ),
+        },
+        theme: defaultTheme,
+        presets: [
+          UniverSheetsCorePreset(),
+        ],
+      });
+
+      fetch('/config.json').then((res) => res.json()).then((json) => {
+        univerAPI.createUniverSheet(json)
+      })
+    </script>
   </body>
 </html>
